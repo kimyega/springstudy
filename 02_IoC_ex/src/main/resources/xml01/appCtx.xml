@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean class="com.gdu.app02.xml01.Contact" id="contact">
+    <property name="mobileString" value="010-5235-4390"/>
+    <property name="fax" value="02-5346-3533"/>
+  </bean>
+  <bean class="com.gdu.app02.xml01.Address" id="address">
+    <constructor-arg value="25300"/>
+    <constructor-arg value="52-10"/>
+    <constructor-arg value="13번길"/>
+  </bean>
+  <bean class="com.gdu.app02.xml01.Person" id="person">
+    <constructor-arg value="이성경"/>
+    <constructor-arg ref="contact"/>
+    <constructor-arg ref="address"/>
+  </bean>
+  
+</beans>
