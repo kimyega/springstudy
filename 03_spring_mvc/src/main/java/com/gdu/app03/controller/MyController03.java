@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gdu.app03.dto.BlogDto;
 
+@RequestMapping("/blog")  // /blog로 시작하는 요청을 처리하는 컨트롤러가 된다.
+                                  // 모든 메소드의 요청에 "/blog"가 자동으로 삽입된다.
 @Controller
 public class MyController03 {
   
@@ -50,7 +52,7 @@ public class MyController03 {
     return "blog/detail";
   }
   
-  @RequestMapping("/blog/detail.do")
+  @RequestMapping("/detail.do")
   public String blogDetail4(@ModelAttribute("dto") BlogDto blogDto) {
     return "blog/detail";
   }

@@ -48,13 +48,16 @@ public class BoardController {
    *  3) Setter 형식의 메소드에 주입하기 
    */
   
+  // 주입된 BoardService 객체의 변경 방지를 위한 final처리 
+  private final BoardService boardService;
   
-  private BoardService boardService;
-  
+  // boardService에 final 처리를 하면 생성자 주입만 가능
   @Autowired
-  public void 세터(BoardService boardService) {
+  public BoardController(BoardService boardService) {
+    super();
     this.boardService = boardService;
   }
+
 
 
   @RequestMapping(value = "/board/list.do", method = RequestMethod.GET)
