@@ -8,4 +8,5 @@ public interface AjaxService {
   public List<AjaxDto> getDtoList();
   public AjaxDto getDto(String name);
   
+  
 }
