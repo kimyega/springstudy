@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+  .header_wrap{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px; 
+  }
+  .logo{
+    background-image: url("../../resources/image/air-jordan.jpg");
+    width: 170px;
+    height: 102px;
+    background-size: 170px 102px;
+    margin: 20px auto;
+  }
+  .gnb_wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .gnb {
+    display: flex;
+    justify-content: space-between;
+    flex: 4;
+  }
+  .gnb li {
+    width: 100%;
+  }
+  .gnb a {
+  display:  block;
+  width: 100%;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  }
+  .gnb a:hover {
+   background-color: #DDDDDD; 
+  }
+  .login_wrap{
+  width: 100%;
+  height: 48px;
+  text-align: right;
+  }
+  
