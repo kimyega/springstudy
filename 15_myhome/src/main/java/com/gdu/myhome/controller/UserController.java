@@ -1,8 +1,12 @@
 package com.gdu.myhome.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -56,6 +60,35 @@ public class UserController {
     }
     
     return rtn;
+  }
+  
+  @GetMapping(value = "/checkEmail.do", produces = "application/json")
+  public ResponseEntity<Map<String, Object>> checkEmail(@RequestParam String email){
+    return userService.checkEmail(email);
+  }
+  
+  @GetMapping(value = "/sendCode.do",produces = MediaType.APPLICATION_JSON_VALUE)
+  public ResponseEntity<Map<String, Object>> sendCode(@RequestParam String email){
+    return userService.sendCode(email);
+  }
+  
+  @PostMapping("/join.do")
+  public void join(HttpServletRequest request, HttpServletResponse response) {
+    userService.join(request, response);
+  }
+  
+  @GetMapping("/mypage.form")
+  public String mypage() {
+    return "user/mypage";
+  }
+  @PostMapping("/modify.do")
+  public ResponseEntity<Map<String, Object>> modify(HttpServletRequest request){
+    return userService.modify(request);
+  }
+  
+  @GetMapping("/modifyPw.form")
+  public void modifyPw(HttpServletRequest request, HttpServletResponse response) {
+    userService.modifyPw(request, response);
   }
   
 }

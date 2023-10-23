@@ -37,10 +37,10 @@
     </div>
     <div class="gnb_wrap">
       <ul class="gnb">
-        <li><a href="${contextPath}">댓글형게시판</a></li>
-        <li><a href="${contextPath}">계층게시판</a></li>
-        <li><a href="${contextPath}">첨부게시판</a></li>
-        <li><a href="${contextPath}">MY</a></li>
+        <li><a href="${contextPath}/user/">댓글형게시판</a></li>
+        <li><a href="${contextPath}/user/">계층게시판</a></li>
+        <li><a href="${contextPath}/user/">첨부게시판</a></li>
+        <li><a href="${contextPath}/user/mypage.form">MY</a></li>
       </ul>
     </div>
   </div>

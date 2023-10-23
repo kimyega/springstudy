@@ -34,7 +34,7 @@ public class MySecurityUtils {
   
   // 인증코드 반환
   public String getRandomString(int count, boolean letters, boolean numbers){
-  return RandomStringUtils.random(count, letters, numbers); 
+    return RandomStringUtils.random(count, letters, numbers); 
   }
   
   // 크로스 사이트 스크립팅(Cross Site Scripting) 방지

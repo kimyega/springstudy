@@ -11,13 +11,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class UserDto {
+public class InactiveUserDto {
   private int userNo;
   private String email;
   private String pw;
   private String name;
   private String gender;
-  private String mobile;
+  private String moblie;
   private String postcode;
   private String roadAddress;
   private String jibunAddress;
@@ -25,4 +25,5 @@ public class UserDto {
   private int agree;
   private Date pwModifiedAt;
   private Date joinedAt;
+  private Date inactiveAt;
 }
